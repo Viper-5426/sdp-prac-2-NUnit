@@ -2,6 +2,9 @@ language: csharp
 dotnet: 2.2
 os: linux
 
+script: 
+- dotnet test Problems.Tests
+
 jobs:
 - dist: xenial
 - dist: bionic
