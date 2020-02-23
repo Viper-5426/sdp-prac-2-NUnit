@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using Problems;
 
 namespace Problems.Tests
 {
@@ -13,6 +14,17 @@ namespace Problems.Tests
         public void Test1()
         {
             Assert.Pass();
+            string a = (Program.Prefix(null));
+            Assert.That(a, Is.Null);
+
+            bool b = (Program.Prefix("Hello") == "5,1:Hello");
+            Assert.That(b, Is.True);
+
+            bool c = (Program.Prefix("") == "0,0:");
+            Assert.That(c, Is.True);
+
+            bool d = (Program.Prefix("what    ...  did you say?? ") == "27,5:what    ...  did you say?? ");
+            Assert.That(d, Is.True);
         }
     }
 }

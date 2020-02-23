@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace Problems
 {
     public class Program
@@ -10,7 +11,7 @@ namespace Problems
             Console.WriteLine(Prefix(input));
         }
 
-        static string Prefix(string input){
+        public static string Prefix(string input){
             string result = input.Length.ToString() +
                             ',' +
                             countWords(input).ToString() +
